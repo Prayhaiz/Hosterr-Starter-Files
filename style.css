@@ -1,0 +1,228 @@
+:root {
+    --bg-color: #f9f4e8;
+    --white: #fff;
+    --blue : hsl(223,79%,60%);
+    --dark-blue : hsl(223,79%,50%);
+    --Lightgrey: hsl(0, 0%, 66%);
+    --lightblue: #4977ea;
+    --black: #000;
+    --red: #d41111f7;
+    --text-color:  #525252;
+    --Lato: 'Lato', sans-serif ;
+    --Playfair: 'Playfair', serif;
+    --font-med: 1.125rem;
+    --font-sm: .875rem;
+    --font-xsm: .75rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+ *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    font-size: var(--font-med);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+a,
+a:visited,
+a:active  {
+    text-decoration: none;
+    color: var(--black);
+ }
+
+ img {
+   overflow-clip-margin: border-box;
+ }
+
+    /**********Header styles   ****************/
+ nav {
+    padding: 35px ;
+ }
+
+ .header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ #hamburger {
+    display: block;
+    width: 26px;
+    height: 4px;
+    background-color: var(--black);
+    justify-content: flex-end;
+ }   
+ #hamburger:last-child {
+    margin-bottom: 0;
+ }
+ 
+ .header__menu > #hamburger:nth-child(1) {
+    margin-bottom: 5px;
+ }
+ 
+ .header__menu > #hamburger:nth-child(2) {
+    margin-bottom: 5px;
+ }
+
+ .header__links {
+    font-size: var(--font-sm);
+    font-family: var(--Lato);
+    transition: ease-in-out 300ms;
+ }
+ .header__links__item:hover {
+   color: var(--red);
+ }
+
+ .header__links__item {
+   color: #333;
+   padding-right: 1.5625rem;
+ }
+
+ .header__links__item:last-child {
+   padding-right: 0;
+ }
+
+  .header__button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 125px;
+   height: 30px;
+   text-align: center;
+   margin: auto;
+    background-image: linear-gradient(to right, #eaad53, #ea606f);
+    color: var(--white);
+    border-radius: 15px;
+    font-size: var(--font-sm);
+    font-family: var(--Lato);
+    font-weight: 400;
+    border: 0;
+    cursor: pointer;
+ }
+
+ .right__opt{
+   font-size: var(--font-sm);
+   font-family: var(--Lato);
+   padding-right: 1.875rem;
+   font-weight: 400;
+   cursor: pointer;
+ }
+
+ .header__links__right .right__opt__btn {
+   display: block;
+   padding: 25px, 20px;
+   font-size: var(--font-sm);
+   font-family: var(--Lato);
+   background-color: var(--lightblue);
+   color: white;
+   font-weight: 700;
+   cursor: pointer;
+ }
+/****  Mobile device            *******/
+
+ @media only screen and (max-width: 30em ){
+
+   /****  Header Styles        *******/
+   .header__nav {
+      display: inline-flex;
+   }
+
+   .header__logo {
+      padding-right: 18px;
+   }
+
+   .header__button {
+      margin-right: 165px;
+      font-size: var(--font-xsm);
+   }
+
+   .header__nav > .header__menu {
+      display: block;
+   }
+
+    .header__links {
+      display: none;
+    }
+
+    .header__links__right {
+      display: none;
+    }
+
+       /****  Hero Styles       *******/
+
+       .hero__body > img {
+         max-width: 450px;
+         max-height: 460px;
+         padding: 30px 50px 30px 90px;
+         position: relative;
+         z-index: 4;
+       }
+
+       img:nth-child(2) {
+         position: absolute;
+         max-width: 312px;
+         max-height: 450px;
+         padding: 0;
+         top: 130px;
+         left: 89.5px;
+         z-index: 2;
+         transform: rotate(330deg);
+       } 
+       
+       img:nth-child(3) {
+         position: absolute;
+         max-width: 312px;
+         max-height: 450px;
+         padding: 0;
+         top: 130px;
+         left: 89.5px;
+         z-index: 2;
+         transform: rotate(342deg);
+       }
+       
+       img:nth-child(4) {
+         position: absolute;
+         max-width: 312px;
+         max-height: 450px;
+         padding: 0;
+         top: 130px;
+         left: 89.5px;
+         z-index: -2;
+         transform: rotate(311deg);
+       }
+
+
+ }
+
+
+ /****  Tablets device            *******/
+
+ @media only screen and (max-width: 48em ){
+
+   .header__menu {
+      display: none;
+   }
+    
+ }
