@@ -250,7 +250,7 @@ a:active  {
 
        input[placeholder] {
          font-size: var(--font-med);
-         font-family: ;
+         font-family: var(--Lato);
          color: var(--black);
          background-color: #fff;
          padding-left: 20px;
