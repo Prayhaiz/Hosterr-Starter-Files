@@ -229,7 +229,7 @@ a:active  {
        }
 
        .bg__text {
-         width: 290px;
+         width: 310px;
          font-size: var(--font-bg);
          font-family: var(--Playfair);
          line-height: 1.3;
