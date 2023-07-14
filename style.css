@@ -32,6 +32,7 @@ body {
     padding: 0;
     background-color: var(--bg-color);
     font-size: var(--font-med);
+    /* overflow: hidden; */
 }
 
 h1,
@@ -50,12 +51,12 @@ a,
 a:visited,
 a:active  {
     text-decoration: none;
-    color: var(--black);
  }
 
  img {
-   overflow-clip-margin: border-box;
+  overflow-clip-margin: none;
  }
+ 
 
     /**********Header styles   ****************/
  nav {
@@ -123,6 +124,10 @@ a:active  {
     cursor: pointer;
  }
 
+ .header__button:hover {
+  opacity: .9;
+ }
+
  .right__opt{
    font-size: var(--font-sm);
    font-family: var(--Lato);
@@ -145,6 +150,11 @@ a:active  {
 
  @media only screen and (max-width: 30em ) {
     /****  Header Styles        *******/
+
+    body {
+      /* overflow-x: hidden; */
+      height: 100vh;
+    }
     .header__nav {
       display: inline-flex;
    }
@@ -178,7 +188,6 @@ a:active  {
          padding: 30px 50px 30px 90px;
          position: relative;
          z-index: 4;
-         border: solid #333 2px;
        }
 
        img:nth-child(2) {
@@ -216,12 +225,11 @@ a:active  {
        /****  Hero-Text styles     *******/
 
        .hero__text {
-         border: solid #333 2px;
          width: 480px;
        }
 
        .bg__text {
-         width: 280px;
+         width: 290px;
          font-size: var(--font-bg);
          font-family: var(--Playfair);
          line-height: 1.3;
@@ -242,10 +250,13 @@ a:active  {
 
        .form  {
          width: 400px;
-         height: 50px;
+         height: 65px;
          background-color: #333;
          margin-left: 30px;
          margin-bottom: 20px;
+         border: none;
+         border-radius: 5px;
+         outline: none;
        }
 
        input[placeholder] {
@@ -254,13 +265,96 @@ a:active  {
          color: var(--black);
          background-color: #fff;
          padding-left: 20px;
-         opacity: 1;
          border: none;
+       }
+
+       .wait__btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 65px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        background-color: var(--dark-blue);
+        color: var(--white);
+        font-family: var(--Lato);
+        font-size: var(--font-med);
+        border: none;
+        border-radius: 5px;
+        font-weight: 400;
+        opacity: .85;
+        cursor: pointer;
+        transition: ease-in-out 300ms;
+       }
+
+       .wait__btn:hover {
+        opacity: 1;
+       }
+
+       .hero__footer {
+        position: relative;
+        display: inline-block;
+       }
+
+       .hero__footer img {
+        position: absolute;
+        left: 28px;
+       }
+
+       .help__text {
+        padding-left: 70px;
+        margin-bottom: 64px;
+        font-size: 16px;
+        font-family: var(--Lato);
+        opacity: .8;
+       }
+
+       .help__sub-text {
+        font-size: var(--font-med);
+        font-family: var(--Lato);
+        opacity: .7;
+       }
+
+       .help__sub-text span:nth-child(1) {
+        padding-left: 35px;
+       }
+
+
+       .help__sub-text  span:not(:last-child) {
+        padding-right: 20px;
+       }
+
+       .help__footer {
+        position: relative;
+        display: inline-block;
+       }
+
+       .help__footer img {
+        position: absolute;
+        left: 20px;
+       }
+
+       .up__text {
+        padding-left: 90px;
+        margin-bottom: 2px;
+        font-weight: 400;
+        font-family: var(--Playfair);
+       }
+
+       .down__text {
+        padding-left: 90px;
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-family: var(--Lato);
        }
 
 
 
+
  }
+
+
 
 
  /****  Tablets device            *******/
